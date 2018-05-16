@@ -13,7 +13,7 @@ var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 var flash = require("express-flash");
 // modularize connection to db
-mongoose.connect("mongodb://localhost/panthos");
+require('./server/config/mongoose.js')(app);
 // modularized models
 require('./server/models/panther.js')(app);
 
